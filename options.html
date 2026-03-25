@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Extension option</title>
+  <style>
+    body{
+      font-family: sans-serif;
+      padding: 20px;
+      max-width: 600px;
+      margin: 0 auto;
+    }
+    h1{
+      color: #4285f4;
+      margin-bottom: 20px;
+    }
+    .form-group{
+      margin-bottom: 20px;
+    }
+    label{
+      display: block;
+      margin-bottom: 5px;
+      font-weight: bold;
+    }
+    input[type="text"]{
+      width: 100%;
+      padding: 8px;
+      box-sizing: border-box;
+      border-radius: 5px;
+      border: 1px solid #ddd;
+    }
+    button{
+      padding: 10px 20px;
+      background-color: #4285f4;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer ;
+      font-weight: bold;
+    }
+    button:hover{
+      background-color: #3367d6;
+    }
+    .sucess-message{
+      color: green;
+      margin-top: 15px;
+      display:none ;
+    }
+    </style>
+</head>
+<body>
+  <h1>AI Summary Settings</h1>
+  <div class="form-group">
+    <label for="api-key">Gemini Api Key</label>
+    <input type="text" id="api-key" placeholder="Enter your Gemini API key">
+    <p>
+      you can get an API key from
+      <a href="https://aistudio.google.com/api-keys"  target="_blank" >
+        Google AI Studio
+      </a>
+    </p>
+  </div>
+  <button id="save-btn">Save Settings</button>
+  <p id="sucess-message" class="sucess-message">
+    Settings saved successfully!
+  </p>
+  <script src="options.js"></script>
+</body>
+</html>
