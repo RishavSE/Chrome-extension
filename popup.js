@@ -36,13 +36,15 @@ document.getElementById("summarize").addEventListener("click", async () => {
   });
 });
 
-document.getElementById("copy-btn").addEventListener("click", () => {
+document.getElementById("copy").addEventListener("click", () => {
   const summaryText = document.getElementById("result").innerText;
   if (summaryText.trim()) {
     navigator.clipboard.writeText(summaryText).then(() => {
-      const copyBtn = document.getElementById("copy-btn");
+      const copyBtn = document.getElementById("copy");
       const originalText = copyBtn.innerText;
       copyBtn.innerText = "Copied!";
+      
+
       setTimeout(() => (copyBtn.innerText = originalText), 2000);
     });
   }
